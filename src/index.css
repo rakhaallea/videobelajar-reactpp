@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+* {
+    font-family: "Poppins", Helvetica, sans-serif;
+}
+
+p {
+    font-family: "DM Sans", Helvetica, sans-serif;
+}
