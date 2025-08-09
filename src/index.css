@@ -1,9 +1,32 @@
 @import "tailwindcss";
+@import "./styles/form.css";
 
-* {
-    font-family: "Poppins", Helvetica, sans-serif;
+@theme {
+    /* Font family */
+    --font-poppins: "Poppins", sans-serif;
+    --font-dm-sans: "DM Sans", sans-serif;
+
+    /* Color */
+    --color-dark-secondary: rgba(74, 80, 92, 1);
+
+    --color-other: rgba(58, 53, 65, 0.12);
+    --color-other-op1: rgba(241, 241, 241, 1);
+    --color-primary-light: rgba(255, 255, 255, 1);
+
+    --color-primary: rgba(62, 207, 76, 1);
+    --color-primary-100: rgba(226, 252, 217, 0.8);
 }
 
-p {
-    font-family: "DM Sans", Helvetica, sans-serif;
+@layer base {
+    h1 {
+        font-family: var(--font-poppins), Helvetica, sans-serif;
+    }
+
+    p {
+        font-family: var(--font-dm-sans), Helvetica, sans-serif;
+    }
 }
+
+@layer component {}
+
+@layer utilities {}
