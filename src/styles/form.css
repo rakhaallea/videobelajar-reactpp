@@ -30,7 +30,7 @@
     }
 
     .btn {
-        @apply py-[7px] px-[22px] text-white rounded-[10px] text-[14px] leading-[1.4] tracking-[0.2px] font-bold
+        @apply py-[7px] px-[22px] text-white rounded-[10px] text-[14px] leading-[1.4] tracking-[0.2px] font-bold text-center
     }
 
     .primary {

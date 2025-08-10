@@ -1,4 +1,4 @@
-import logoNavbar from '../assets/icon/logo_mobile.png';
+import logoNavbar from '../../../assets/icon/logo_mobile.png';
 
 const Header = () => {
     return (

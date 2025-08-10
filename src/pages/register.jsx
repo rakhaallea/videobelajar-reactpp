@@ -1,11 +1,13 @@
-import { Link } from 'react-router'
 
-const register = () => {
+import Form from "../components/sections/Form"
+
+const register = ({ form }) => {
     return (
-        <div>
-            <h1>Register</h1>
-            <Link to={"/"}>Register</Link>
-        </div>
+        <>
+            <main className='@container min-h-screen py-[28px] px-[20px] bg-[#FFFDF3]'>
+                <Form form={form} />
+            </main>
+        </>
     )
 }
 

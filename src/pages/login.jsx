@@ -1,17 +1,11 @@
-// Component
-import Header from '../components/Header';
-import Form from '../components/Form';
 
-import { Link } from 'react-router'
+import Form from "../components/sections/Form"
 
-
-
-const login = () => {
+const login = ({ form }) => {
     return (
         <>
-            <Header />
-            <main className='container h-screen py-[28px] px-[20px] bg-[#FFFDF3]'>
-                <Form />
+            <main className='container min-h-screen py-[28px] px-[20px] bg-[#FFFDF3]'>
+                <Form form={form} />
             </main>
         </>
     )

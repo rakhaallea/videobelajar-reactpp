@@ -1,8 +1,10 @@
-
+import Header from "../components/sections/navbar/Header"
 
 const homepage = () => {
     return (
-        <div>homepage</div>
+        <>
+            <div>Homepage</div>
+        </>
     )
 }
 

@@ -3,21 +3,22 @@ import Layout from "./pages/Layout";
 import Homepage from "./pages/Homepage";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import NotFound from "./pages/NotFound";
 
 const App = () => {
   return (
-    // <div>
-    //   <RouterProvider router={router} />
-    // </div>
     <BrowserRouter>
       <Routes>
         {/* Parent route */}
         <Route path="/" element={<Layout />}>
           {/* Child routes */}
-          <Route index element={<Login />} />
-          <Route path="register" element={<Register />} />
+          <Route index element={<Login form="login" />} />
+          <Route path="register" element={<Register form="register" />} />
           <Route path="home" element={<Homepage />} />
         </Route>
+
+        {/* Not Found */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   )
