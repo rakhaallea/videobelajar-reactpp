@@ -1,0 +1,59 @@
+@layer components {
+    .cards {
+        @apply flex flex-col gap-[24px]
+    }
+
+    .card {
+        @apply flex flex-col gap-[8px] rounded-xl p-[16px] border bg-white border-other
+    }
+
+    .cards-header {
+        @apply flex flex-col gap-[10px]
+    }
+
+    .card-content {
+        @apply flex items-center gap-[12px]
+    }
+
+    .nav-items {
+        @apply flex items-center w-[500px]
+    }
+
+    .profile {
+        @apply flex gap-[8px] items-center
+    }
+}
+
+@layer utilities {
+    .cards-header .title {
+        @apply font-semibold text-[26px] leading-[1.4] text-dark-primary;
+    }
+
+    .cards-header .text {
+        @apply text-[16px] leading-[1.4] tracking-[0.2px] text-dark-secondary;
+    }
+
+    .nav-item {
+        @apply py-[12px] pr-[36px] text-sm leading-[1.4] tracking-[0.2px] text-dark-secondary hover:text-tertiary relative;
+    }
+
+    .nav-item:after {
+        @apply content-[""] bg-tertiary h-[6px] w-[0%] left-0 bottom-[1px] rounded-xl duration-300 absolute;
+    }
+
+    .nav-item:hover:after {
+        @apply w-[50%]
+    }
+
+    .card-image {
+        @apply w-[82px] h-[82px] object-cover rounded-xl
+    }
+
+    .icon-image {
+        @apply w-[36px] h-[36px] rounded-xl
+    }
+
+    .desc .title {
+        @apply font-semibold leading-[1.2] text-[16px] text-dark-primary;
+    }
+}

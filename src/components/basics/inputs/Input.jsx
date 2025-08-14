@@ -1,6 +1,5 @@
-import React from 'react'
 
-const Input = (id, type) => {
+const Input = ({ id, type }) => {
     return (
         <input
             id={id}
