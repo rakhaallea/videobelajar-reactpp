@@ -9,13 +9,13 @@ const Card = ({ img, title, instructor, ratings, price }) => {
         return [...Array(5)].map((_, i) => {
             if (rating >= i + 1) {
                 // full star
-                return <FontAwesomeIcon key={i} icon={faStar} className="text-yellow-400" />;
+                return <FontAwesomeIcon key={i} icon={faStar} className="text-yellow-300 text-sm" />;
             } else if (rating >= i + 0.5) {
                 // half star
-                return <FontAwesomeIcon key={i} icon={faStarHalfAlt} className="text-yellow-400" />;
+                return <FontAwesomeIcon key={i} icon={faStarHalfAlt} className="text-yellow-300 text-sm" />;
             } else {
                 // empty star
-                return <FontAwesomeIcon key={i} icon={faStarRegular} className="text-gray-300" />;
+                return <FontAwesomeIcon key={i} icon={faStarRegular} className="text-gray-300 text-sm" />;
             }
         });
     };
@@ -34,8 +34,8 @@ const Card = ({ img, title, instructor, ratings, price }) => {
                         <div className="profile">
                             <img src={instructor.img} alt="" className="icon-image" />
                             <div className="flex flex-col justify-center">
-                                <h1 className="text-sm font-semibold">{instructor.name}</h1>
-                                <p className="font-thin">{instructor.position}</p>
+                                <h1 className="text-sm font-medium text-dark-primary">{instructor.name}</h1>
+                                <p className="font-thin text-dark-secondary text-[12px]">{instructor.position}</p>
                             </div>
                         </div>
                     </div>
