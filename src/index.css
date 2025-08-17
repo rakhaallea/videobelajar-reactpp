@@ -65,4 +65,12 @@
     .hero .btn-cta {
         @apply max-w-[280px] bg-primary rounded-md py-[10px] px-[26px] text-xs text-white leading-[1.4] tracking-[0.2px] hover:bg-white hover:text-primary duration-150;
     }
+
+    .diveder {
+        @apply w-full h-[1px] bg-other;
+    }
+
+    .social-link {
+        @apply border p-2 rounded-4xl text-[20px] text-dark-secondary hover:text-tertiary duration-150;
+    }
 }
