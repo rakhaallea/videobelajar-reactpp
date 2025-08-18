@@ -1,6 +1,6 @@
 @layer components {
     .form-container {
-        @apply @container flex flex-col border border-solid gap-[20px] p-[20px] border-white bg-white rounded-sm
+        @apply @container flex flex-col border border-solid gap-[20px] p-[20px] md:max-w-[590px] mx-auto border-white bg-white rounded-sm
     }
 
     .form-header {
@@ -14,15 +14,15 @@
 
 @layer utilities {
     .form-title {
-        @apply font-semibold text-2xl
+        @apply font-semibold text-2xl md:text-[32px]
     }
 
     .form-text {
-        @apply font-normal text-[14px] leading-[1.4] tracking-[0.2px] text-dark-secondary/68;
+        @apply font-normal text-[14px] md:text-[16px] leading-[1.4] tracking-[0.2px] text-dark-secondary/68;
     }
 
     .label-title {
-        @apply text-[14px] leading-[1.4] tracking-[0.2px] text-dark-secondary/68;
+        @apply text-[14px] md:text-[16px] leading-[1.4] tracking-[0.2px] text-dark-secondary/68;
     }
 
     .input-text {
@@ -30,7 +30,7 @@
     }
 
     .btn {
-        @apply py-[7px] px-[22px] text-white rounded-[10px] text-[14px] leading-[1.4] tracking-[0.2px] font-bold text-center
+        @apply py-[7px] md:py-[10px] px-[22px] md:px-[26px] text-white rounded-[10px] text-[14px] leading-[1.4] tracking-[0.2px] font-bold text-center
     }
 
     .primary {

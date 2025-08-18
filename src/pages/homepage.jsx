@@ -11,7 +11,7 @@ import Footer from "../components/sections/homepage/Footer";
 const homepage = () => {
     return (
         <>
-            <div className="@container py-[28px] px-[20px] flex flex-col gap-[24px] bg-[#FFFDF3]">
+            <div className="@container py-[28px] px-[20px] md:py-[64px] md:px-[120px] flex flex-col gap-[24px] md:gap-[64px] bg-[#FFFDF3]">
                 {/* Hero Section */}
                 <Hero />
 

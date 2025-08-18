@@ -56,9 +56,11 @@ export const dataCourses = [
         id: 1,
         img: course_1,
         title: "Big 4 Auditor Financial Analyst",
+        desc: "Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik",
         instructor: {
             name: "Jenna Ortega",
             position: "Senior Accountant",
+            office: "Gojek",
             img: icon_1
         },
         ratings: {
@@ -71,9 +73,11 @@ export const dataCourses = [
         id: 2,
         img: course_2,
         title: "Big 4 Auditor Financial Analyst",
+        desc: "Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik",
         instructor: {
             name: "Jenna Ortega",
             position: "Senior Accountant",
+            office: "Gojek",
             img: icon_2
         },
         ratings: {
@@ -86,9 +90,11 @@ export const dataCourses = [
         id: 3,
         img: course_3,
         title: "Big 4 Auditor Financial Analyst",
+        desc: "Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik",
         instructor: {
             name: "Jenna Ortega",
             position: "Senior Accountant",
+            office: "Gojek",
             img: icon_3
         },
         ratings: {
@@ -101,9 +107,11 @@ export const dataCourses = [
         id: 4,
         img: course_4,
         title: "Big 4 Auditor Financial Analyst",
+        desc: "Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik",
         instructor: {
             name: "Jenna Ortega",
             position: "Senior Accountant",
+            office: "Gojek",
             img: icon_4
         },
         ratings: {
@@ -116,9 +124,11 @@ export const dataCourses = [
         id: 5,
         img: course_5,
         title: "Big 4 Auditor Financial Analyst",
+        desc: "Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik",
         instructor: {
             name: "Jenna Ortega",
             position: "Senior Accountant",
+            office: "Gojek",
             img: icon_5
         },
         ratings: {
@@ -131,9 +141,11 @@ export const dataCourses = [
         id: 6,
         img: course_6,
         title: "Big 4 Auditor Financial Analyst",
+        desc: "Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik",
         instructor: {
             name: "Jenna Ortega",
             position: "Senior Accountant",
+            office: "Gojek",
             img: course_6,
         },
         ratings: {
@@ -146,9 +158,11 @@ export const dataCourses = [
         id: 7,
         img: course_7,
         title: "Big 4 Auditor Financial Analyst",
+        desc: "Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik",
         instructor: {
             name: "Jenna Ortega",
             position: "Senior Accountant",
+            office: "Gojek",
             img: icon_7,
         },
         ratings: {
@@ -161,9 +175,11 @@ export const dataCourses = [
         id: 8,
         img: course_8,
         title: "Big 4 Auditor Financial Analyst",
+        desc: "Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik",
         instructor: {
             name: "Jenna Ortega",
             position: "Senior Accountant",
+            office: "Gojek",
             img: icon_8
         },
         ratings: {
@@ -176,9 +192,11 @@ export const dataCourses = [
         id: 9,
         img: course_9,
         title: "Big 4 Auditor Financial Analyst",
+        desc: "Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik",
         instructor: {
             name: "Jenna Ortega",
             position: "Senior Accountant",
+            office: "Gojek",
             img: icon_9
         },
         ratings: {

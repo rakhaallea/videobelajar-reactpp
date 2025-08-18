@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faStarHalfAlt } from "@fortawesome/free-solid-svg-icons";
 import { faStar as faStarRegular } from "@fortawesome/free-regular-svg-icons"; // bintang kosong
 
-const Card = ({ img, title, instructor, ratings, price }) => {
+const Card = ({ img, title, desc, office, instructor, ratings, price }) => {
     const renderStars = (rating) => {
         return [...Array(5)].map((_, i) => {
             if (rating >= i + 1) {
@@ -25,12 +25,13 @@ const Card = ({ img, title, instructor, ratings, price }) => {
         <>
             <div className="card">
                 <main className="card-content">
-                    <img src={img} alt="" className="card-image flex-2/5" />
+                    <img src={img} alt={img} className="card-image " />
 
                     <div className="desc flex flex-col gap-[8px]">
                         <h1 className="title">
                             {title}
                         </h1>
+                        <p className='text'>{desc}</p>
                         <div className="profile">
                             <img src={instructor.img} alt="" className="icon-image" />
                             <div className="flex flex-col justify-center">

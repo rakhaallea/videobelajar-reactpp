@@ -13,11 +13,11 @@ const Header = () => {
     }
 
     return (
-        <header className='@container py-[16px] px-[24px] border-t-1 border-b-1 border-amber-50 shadow-lg flex justify-between items-center relative'>
+        <header className='@container py-[16px] px-[24px] border-t-1 border-b-1 border-amber-50 shadow-sm flex justify-between items-center md:px-[120px] relative'>
             <img src={logoNavbar} alt="video belajar logo" />
-            <IoMdMenu size={30} onClick={handleMenuClick} />
+            <IoMdMenu size={30} onClick={handleMenuClick} className='md:hidden' />
 
-            <nav className={`${isOpen ? 'block' : 'hidden'} flex flex-col absolute top-[64px] right-0 left-0 items-start bg-white shadow-lg rounded-lg z-10`}>
+            <nav className={`${isOpen ? 'flex' : 'hidden'} flex-col absolute top-[64px] right-0 left-0 items-start bg-white shadow-lg rounded-lg z-10`}>
                 <a href="#" className='link-nav'>Kategori</a>
                 <a href="#" className='link-nav'>Profile Saya</a>
                 <a href="#" className='link-nav'>Kelas Saya</a>

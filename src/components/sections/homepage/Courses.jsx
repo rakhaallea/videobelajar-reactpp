@@ -16,7 +16,7 @@ const Courses = () => {
                         Jelajahi Dunia Pengetahuan Melalui Pilihan Kami!
                     </p>
                 </header>
-                <div className="card-navigation overflow-scroll" >
+                <div className="card-navigation overflow-x-scroll md:overflow-hidden" >
                     <ul className="nav-items">
                         <li className="nav-item active">Semua Kelas</li>
                         <li className="nav-item">Pemasaran</li>
@@ -24,12 +24,14 @@ const Courses = () => {
                         <li className="nav-item">Pengembangan Diri</li>
                     </ul>
                 </div>
-                <div className="cards-content flex flex-col gap-[20px]">
+                <div className="cards-content">
                     {dataCourses.map((course, index) => (
                         <Card
                             key={index}
                             img={course.img}
                             title={course.title}
+                            desc={course.desc}
+                            office={course.instructor.office}
                             instructor={course.instructor}
                             ratings={course.ratings}
                             price={course.price} />
