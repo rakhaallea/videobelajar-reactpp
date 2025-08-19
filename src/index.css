@@ -81,4 +81,16 @@
     .social-link {
         @apply border p-2 rounded-4xl text-[20px] text-dark-secondary hover:text-tertiary duration-150;
     }
+
+    .banner-cta .title {
+        @apply text-[16px] md:text-[18px] font-medium text-secondary-light
+    }
+
+    .banner-cta .desc .title {
+        @apply font-semibold text-2xl md:text-[32px] leading-[1.2] text-primary-light;
+    }
+
+    .banner-cta .desc .text {
+        @apply text-sm md:text-[16px] font-normal leading-[1.4] tracking-[0.2] text-base;
+    }
 }
