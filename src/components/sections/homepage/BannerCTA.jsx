@@ -17,7 +17,7 @@ const BannerCTA = () => {
                 </div>
                 <form action="" className="w-full md:w-[525px] flex flex-col gap-[16px] z-1 md:relative">
                     <input type="text" placeholder="Masukkan Emailmu" className="bg-white text-center md:text-start py-[10px] px-[26px] rounded-xl md:py-4" />
-                    <button type="submit" className="py-[10px] px-[26px] bg-amber-400 rounded-xl text-primary-light font-bold leading-[1.4] tracking-[0.2] md:top-1.5 md:right-2 md: md:absolute cursor-pointer">Subscribe</button>
+                    <button type="submit" className="py-[10px] px-[26px] bg-amber-400 rounded-xl text-primary-light font-bold leading-[1.4] tracking-[0.2] md:top-1.5 md:right-2 md: md:absolute cursor-pointer hover:bg-amber-50 hover:text-amber-400 duration-150">Subscribe</button>
                 </form>
             </section>
         </>

@@ -38,7 +38,7 @@
 
 @layer component {
     .banner {
-        @apply flex flex-col justify-center items-center gap-[24px] py-[44px] px-[20px] md:pt-[82px] md:pb-[64px] md:px-[120px] rounded-lg;
+        @apply mt-[60px] flex flex-col justify-center items-center gap-[24px] py-[44px] px-[20px] md:pt-[82px] md:pb-[64px] md:px-[120px] rounded-lg;
     }
 
     .hero {

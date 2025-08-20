@@ -9,7 +9,7 @@ const Hero = () => {
                 <p className="text z-1">
                     Temukan ilmu baru yang menarik dan mendalam melalui koleksi video pembelajaran berkualitas tinggi. Tidak hanya itu, Anda juga dapat berpartisipasi dalam latihan interaktif yang akan meningkatkan pemahaman Anda.
                 </p>
-                <button className="btn-cta z-1">
+                <button className="btn-cta z-1 cursor-pointer">
                     Temukan Video Course untuk Dipelajari!
                 </button>
             </section>

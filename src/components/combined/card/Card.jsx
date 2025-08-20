@@ -36,7 +36,11 @@ const Card = ({ img, title, desc, office, instructor, ratings, price }) => {
                             <img src={instructor.img} alt="" className="icon-image" />
                             <div className="flex flex-col justify-center">
                                 <h1 className="text-sm font-medium text-dark-primary">{instructor.name}</h1>
-                                <p className="font-thin text-dark-secondary text-[12px]">{instructor.position}</p>
+                                <p className="font-thin text-dark-secondary text-[12px]">
+                                    {instructor.position}
+                                    <span className='hidden ml-1 md:inline-block'>di <b className='font-bold'>{instructor.office}</b>
+                                    </span>
+                                </p>
                             </div>
                         </div>
                     </div>

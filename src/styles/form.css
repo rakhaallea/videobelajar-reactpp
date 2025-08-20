@@ -1,6 +1,6 @@
 @layer components {
     .form-container {
-        @apply @container flex flex-col border border-solid gap-[20px] p-[20px] md:max-w-[590px] mx-auto border-white bg-white rounded-sm
+        @apply @container flex flex-col border border-solid gap-[20px] my-[60px] p-[20px] md:max-w-[590px] mx-auto border-white bg-white rounded-sm
     }
 
     .form-header {
@@ -30,18 +30,18 @@
     }
 
     .btn {
-        @apply py-[7px] md:py-[10px] px-[22px] md:px-[26px] text-white rounded-[10px] text-[14px] leading-[1.4] tracking-[0.2px] font-bold text-center
+        @apply py-[7px] md:py-[10px] px-[22px] md:px-[26px] text-white rounded-[10px] text-[14px] leading-[1.4] tracking-[0.2px] font-bold text-center cursor-pointer duration-150;
     }
 
     .primary {
-        @apply bg-primary
+        @apply bg-primary hover:bg-green-200 hover:text-primary text-white;
     }
 
     .primary-100 {
-        @apply text-primary bg-primary-100
+        @apply text-primary bg-primary-100 hover:bg-green-300 hover:text-white;
     }
 
     .btn-google {
-        @apply flex justify-center items-center border rounded-md border-other-op1 py-[8px] px-[26px] gap-[8px]
+        @apply flex justify-center items-center border rounded-md border-other-op1 py-[8px] px-[26px] gap-[8px] text-black hover:bg-gray-100 duration-150;
     }
 }

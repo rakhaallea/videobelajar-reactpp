@@ -31,12 +31,12 @@ const inputRegister = () => {
             <div className='flex flex-col gap-1'>
                 <Label toId="phone-input" text="No HP" />
                 <div className="flex gap-4">
-                    <div className="flex justify-between items-center flex-2/3 w-full border rounded border-other">
+                    <div className="flex justify-between items-center flex-2/3 md:flex-2/4 w-full border rounded border-other">
                         <div className='bg-gray-200 h-full flex items-center p-3 rounded-sm'>
                             <img src={selected.img} width={25} />
                         </div>
                         <select
-                            className="border-none outline-0 h-full"
+                            className="border-none outline-0 h-full flex-2"
                             value={selected.kodeTelp}
                             onChange={(e) => {
                                 const found = dataTelp.find((item) => item.kodeTelp == e.target.value);

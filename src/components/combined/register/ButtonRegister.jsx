@@ -4,7 +4,8 @@ import LinkTo from "../../basics/Link/Link"
 const ButtonRegister = () => {
     return (
         <>
-            <Button type="submit" text="Register" />
+            {/* <Button type="submit" text="Register" /> */}
+            <LinkTo text="Register" path="/" />
             <LinkTo text="Masuk" path="/" />
         </>
     )

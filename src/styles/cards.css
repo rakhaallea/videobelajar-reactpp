@@ -8,7 +8,7 @@
     }
 
     .card {
-        @apply flex flex-col gap-[8px] rounded-xl p-[16px] border bg-white border-other cursor-pointer
+        @apply flex flex-col gap-[8px] rounded-xl p-[16px] border bg-white border-other cursor-pointer hover:shadow-lg duration-150;
     }
 
     .cards-header {
