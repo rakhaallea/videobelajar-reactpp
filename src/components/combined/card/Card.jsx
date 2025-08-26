@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faStarHalfAlt } from "@fortawesome/free-solid-svg-icons";
 import { faStar as faStarRegular } from "@fortawesome/free-regular-svg-icons"; // bintang kosong
 
-const Card = ({ img, title, desc, office, instructor, ratings, price }) => {
+const Card = ({ img, title, desc, instructor, ratings, price }) => {
     const renderStars = (rating) => {
         return [...Array(5)].map((_, i) => {
             if (rating >= i + 1) {

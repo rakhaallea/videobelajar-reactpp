@@ -24,7 +24,7 @@ const buttons = {
 const Form = ({ form }) => {
 
     return (
-        <form action="/home" className='form-container'>
+        <form action="/home" className='form-container' onSubmit={handleSubmit}>
             {headers[form]}
 
             <main className='form-group'>

@@ -146,7 +146,7 @@ export const dataCourses = [
             name: "Jenna Ortega",
             position: "Senior Accountant",
             office: "Gojek",
-            img: course_6,
+            img: icon_6,
         },
         ratings: {
             stars: 4,
