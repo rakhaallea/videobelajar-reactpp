@@ -1,9 +1,9 @@
 import { Link } from "react-router"
 
 // Elements
-import Input from '../components/elements/inputs/input'
-import Label from '../components/elements/label/label'
-import Option from '../components/elements/option/Option'
+import Input from '../components/basics/inputs/input'
+import Label from '../components/basics/label/label'
+import Option from '../components/basics/option/Option'
 
 // Icons
 import iconGoogle from '../assets/icon/google_icon.png'
