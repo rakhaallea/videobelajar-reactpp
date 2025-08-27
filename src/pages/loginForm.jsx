@@ -7,12 +7,47 @@ import Label from '../components/elements/label/label'
 // Icons
 import iconGoogle from '../assets/icon/google_icon.png'
 
-const login = () => {
+// State
+import { useState } from 'react'
+import useLogin from "../hooks/useLogin"
+
+const loginForm = () => {
+
+    const { login } = useLogin();
+    const [formData, setFormData] = useState({
+        email: '',
+        password: '',
+    });
+    const [error, setError] = useState("");
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+
+        setFormData({
+            ...formData,
+            [name]: value
+        });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const result = login(formData);
+        if (!result.success) {
+            setError(result.message);
+        }
+
+        // Reset form fields
+        setFormData({
+            email: '',
+            password: '',
+        });
+    }
+
     return (
         <>
             <main className='container min-h-screen py-[28px] px-[20px] md:py-[64px] bg-[#FFFDF3]'>
                 {/* <Form form={form} /> */}
-                <form action="/home" className='form-container'>
+                <form className='form-container' onSubmit={handleSubmit}>
                     {/* {headers[form]} */}
 
                     <header className='form-header'>
@@ -22,6 +57,7 @@ const login = () => {
                         <p className='form-text'>
                             Yuk, lanjutin belajarmu di videobelajar.
                         </p>
+                        {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
                     </header>
 
                     <main className='form-group'>
@@ -31,11 +67,25 @@ const login = () => {
                             <div className='flex flex-col gap-[12px]'>
                                 <div className='flex flex-col gap-1'>
                                     <Label toId="email-input" text="E-Mail" />
-                                    <Input type="email" id="email-input" />
+                                    <Input
+                                        type="email"
+                                        id="email-input"
+                                        name="email"
+                                        value={formData.email}
+                                        onChange={handleChange}
+                                    />
                                 </div>
                                 <div className='flex flex-col gap-1'>
-                                    <Label toId="password-input" text="Kata Sandi" />
-                                    <Input type="password" id="password-input" />
+                                    <Label
+                                        toId="password-input"
+                                        text="Kata Sandi"
+                                    />
+                                    <Input
+                                        type="password" id="password-input"
+                                        name="password"
+                                        value={formData.password}
+                                        onChange={handleChange}
+                                    />
                                 </div>
                                 <p className='label-title text-right'>Lupa Password?</p>
                             </div>
@@ -70,4 +120,4 @@ const login = () => {
     )
 }
 
-export default login
+export default loginForm

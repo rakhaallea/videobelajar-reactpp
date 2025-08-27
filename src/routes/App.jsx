@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router";
-import Layout from "./pages/Layout";
-import Homepage from "./pages/Homepage";
-import Login from "./pages/login";
-import Register from "./pages/Register";
-import NotFound from "./pages/NotFound";
+import Layout from "../pages/Layout";
+import Homepage from "../pages/Homepage";
+import Login from "../pages/loginForm";
+import Register from "../pages/registerForm";
+import NotFound from "../pages/NotFound";
 
 const App = () => {
   return (

@@ -1,9 +1,9 @@
 
 
-const Option = ({ gender }) => {
+const Option = ({ value }) => {
     return (
-        <option value={gender} className="label-title">
-            {gender}
+        <option value={value} className="label-title">
+            {value ? value : "Pilih Jenis Kelamin"}
         </option>
     )
 }

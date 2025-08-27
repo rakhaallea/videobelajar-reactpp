@@ -8,3 +8,5 @@ const user = [
         phone: "081234567890",
     },
 ];
+
+export default user;
