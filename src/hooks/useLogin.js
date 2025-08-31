@@ -13,7 +13,7 @@ const useLogin = () => {
         );
 
         if (foundUser) {
-            navigate("/home");
+            navigate("/");
             return { success: true, message: "Login successful", user: foundUser };
         } else {
             return { success: false, message: "Invalid email or password" };

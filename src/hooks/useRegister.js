@@ -4,6 +4,8 @@ import user from "../utils/dataUser"
 //
 import { useNavigate } from "react-router";
 
+import iconProfile from '../assets/icon/icon_1.png'
+
 const useRegister = () => {
     const navigate = useNavigate();
 
@@ -18,7 +20,7 @@ const useRegister = () => {
                 email: data.email,
                 gender: data.gender,
                 phone: data.phone,
-                img: "",
+                img: iconProfile,
                 password: data.password,
             });
             navigate("/");

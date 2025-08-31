@@ -10,7 +10,6 @@ import iconGoogle from '../assets/icon/google_icon.png'
 
 // Data
 import { dataTelp } from '../utils/data.js';
-import user from "../utils/dataUser.js";
 
 // State
 import { useState } from 'react'

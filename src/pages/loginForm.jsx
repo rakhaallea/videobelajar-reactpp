@@ -11,7 +11,7 @@ import iconGoogle from '../assets/icon/google_icon.png'
 import { useState } from 'react'
 import useLogin from "../hooks/useLogin"
 
-const loginForm = () => {
+const loginForm = ({ setUser }) => {
 
     const { login } = useLogin();
     const [formData, setFormData] = useState({
@@ -35,6 +35,8 @@ const loginForm = () => {
         if (!result.success) {
             setError(result.message);
         }
+
+        setUser(formData)
 
         // Reset form fields
         setFormData({
@@ -109,7 +111,7 @@ const loginForm = () => {
                             <p className='form-text'>atau</p>
                             <hr className='flex-1/2 text-other-op1' />
                         </div>
-                        <button className='btn-google'>
+                        <button className='btn-google' type="button">
                             <img src={iconGoogle} alt="icon google" width={15} height={20} />
                             <p className='form-text'>Masuk Dengan Google</p>
                         </button>

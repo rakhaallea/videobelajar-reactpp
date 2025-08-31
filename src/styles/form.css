@@ -34,12 +34,17 @@
     }
 
     .primary {
-        @apply bg-primary hover:bg-green-200 hover:text-primary text-white;
+        @apply bg-primary hover:bg-transparent hover:text-primary text-white border border-primary duration-150;
     }
 
     .primary-100 {
         @apply text-primary bg-primary-100 hover:bg-green-300 hover:text-white;
     }
+
+    .btn-register {
+        @apply border border-primary bg-transparent text-primary hover:text-white hover:bg-primary duration-150;
+    }
+
 
     .btn-google {
         @apply flex justify-center items-center border rounded-md border-other-op1 py-[8px] px-[26px] gap-[8px] text-black hover:bg-gray-100 duration-150;

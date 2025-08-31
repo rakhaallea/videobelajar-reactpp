@@ -5,16 +5,24 @@ import Login from "../pages/loginForm";
 import Register from "../pages/registerForm";
 import NotFound from "../pages/NotFound";
 
+// state
+import { useState } from "react";
+
+// data
+import userData from "../utils/dataUser";
+
 const App = () => {
+  const [user, setUser] = useState(null); // belum login
+
   return (
     <BrowserRouter>
       <Routes>
         {/* Parent route */}
-        <Route path="/" element={<Layout />}>
+        <Route path="/" element={<Layout user={user} setUser={setUser} userData={userData} />}>
           {/* Child routes */}
-          <Route index element={<Login form="login" />} />
+          <Route path="login" element={<Login form="login" setUser={setUser} />} />
           <Route path="register" element={<Register form="register" />} />
-          <Route path="home" element={<Homepage />} />
+          <Route index path="/" element={<Homepage />} />
         </Route>
 
         {/* Not Found */}
