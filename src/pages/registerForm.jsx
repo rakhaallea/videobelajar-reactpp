@@ -48,7 +48,6 @@ const registerForm = () => {
             setError("Pilih jenis kelamin");
         } else if (formData.password !== formData.rePassword) {
             setError("Password dan konfirmasi password tidak sesuai");
-
         } else {
             setError("");
             const result = register(formData);

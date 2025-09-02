@@ -22,6 +22,24 @@ const Header = ({ user, setUser, userData }) => {
         setIsOpen(!isOpen);
     };
 
+    const handlePrevent = (e) => {
+        e.preventDefault()
+    }
+
+    const homepage = (e) => {
+        handlePrevent(e)
+
+        setIsOpen(!isOpen);
+        navigate("/");
+    }
+
+    const profile = (e) => {
+        handlePrevent(e)
+
+        setIsOpen(!isOpen);
+        navigate("/profile");
+    }
+
     // cek apakah sedang di /login atau /register
     const hideMenu = location.pathname === "/login" || location.pathname === "/register";
 
@@ -31,7 +49,7 @@ const Header = ({ user, setUser, userData }) => {
 
     return (
         <header className='@container py-[16px] px-[24px] border-t-1 border-b-1 border-amber-50 shadow-sm flex justify-between items-center md:px-[120px] fixed top-0 left-0 right-0 z-50 bg-white'>
-            <img src={logoNavbar} alt="video belajar logo" />
+            <img src={logoNavbar} alt="video belajar logo" onClick={homepage} />
             {!hideMenu && (
                 <>
                     <IoMdMenu size={30} onClick={handleMenuClick} className='md:hidden' />
@@ -60,7 +78,7 @@ const Header = ({ user, setUser, userData }) => {
                 {user ? (
                     <>
                         <a href="#" className='link-nav md:hidden'>Kategori</a>
-                        <a href="#" className='link-nav'>Profile Saya</a>
+                        <a href="/profile" className='link-nav' onClick={profile}>Profile Saya</a>
                         <a href="#" className='link-nav'>Kelas Saya</a>
                         <a href="#" className='link-nav'>Pesanan Saya</a>
                         <button className='flex items-center gap-2 text-red-500 cursor-pointer' onClick={logOut}>
