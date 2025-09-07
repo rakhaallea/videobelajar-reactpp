@@ -34,11 +34,7 @@ const registerForm = () => {
     const handleChange = (e) => {
         const { name, value } = e.target;
 
-        if (name === "phone") {
-            setFormData({ ...formData, [name]: selected.kodeTelp + value });
-        } else {
-            setFormData({ ...formData, [name]: value });
-        }
+        setFormData({ ...formData, [name]: value });
     };
 
     const handleSubmit = (e) => {
@@ -50,10 +46,18 @@ const registerForm = () => {
             setError("Password dan konfirmasi password tidak sesuai");
         } else {
             setError("");
-            const result = register(formData);
+
+            const payload = {
+                ...formData,
+                phone: selected.kodeTelp + formData.phone,
+            };
+
+            const result = register(payload);
             if (!result.success) {
                 setError(result.message);
             }
+
+            console.log(payload)
 
             // Reset form fields
             setFormData({
@@ -65,8 +69,6 @@ const registerForm = () => {
                 phone: '',
             });
         }
-
-
     }
 
     return (

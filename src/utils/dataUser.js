@@ -1,4 +1,4 @@
-import iconProfile from "../assets/icon/icon_1.png";
+import iconProfile from "../assets/icon/jess-icon.png";
 
 const user = [
     {

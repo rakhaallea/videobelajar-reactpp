@@ -4,7 +4,7 @@ import user from "../utils/dataUser"
 //
 import { useNavigate } from "react-router";
 
-import iconProfile from '../assets/icon/icon_1.png'
+import iconProfile from '../assets/icon/jess-icon.png'
 
 const useRegister = () => {
     const navigate = useNavigate();
@@ -28,24 +28,7 @@ const useRegister = () => {
         }
     }
 
-    const editUser = (id, newData) => {
-        const index = user.findIndex((u) => u.id === id);
-        if (index === -1) {
-            return { success: false, message: "User tidak ditemukan" };
-        }
-
-        // Update NewData
-        user[index] = {
-            ...user[index],
-            name: newData.name,
-            email: newData.email,
-            password: newData.newPass,
-        }
-
-        return { success: true, message: "Data user berhasil diupdate", user: user[index] };
-    }
-
-    return { register, editUser }
+    return { register }
 }
 
 export default useRegister

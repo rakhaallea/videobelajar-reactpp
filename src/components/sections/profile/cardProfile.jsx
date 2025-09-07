@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react"
 
 import imgProfile from "../../../assets/icon/jess-icon.png"
-import useRegister from "../../../hooks/useRegister"
+import useEditUser from "../../../hooks/useEditUser";
+import useDeleteUser from "../../../hooks/useDeleteUser";
 
 const CardProfile = ({ userInfo }) => {
 
-    const { editUser } = useRegister();
+    const { editUser } = useEditUser();
+    const { deleteUser } = useDeleteUser();
 
     const [formData, setFormData] = useState({
         name: '',
@@ -16,6 +18,7 @@ const CardProfile = ({ userInfo }) => {
     })
 
     const [error, setError] = useState('')
+    const [success, setSuccess] = useState('')
 
     useEffect(() => {
         if (userInfo) {
@@ -38,6 +41,17 @@ const CardProfile = ({ userInfo }) => {
         });
     }
 
+    const handleDelete = (id) => {
+        // console.log(deleteUser(id))
+        // Contoh penggunaan di web
+        let yakinHapus = confirm("Apakah Anda yakin ingin menghapus akun ini?");
+
+        if (yakinHapus) {
+            // Jika pengguna mengklik OK (true)
+            deleteUser(id)
+        }
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -52,6 +66,10 @@ const CardProfile = ({ userInfo }) => {
                 setError(result.message)
             }
 
+            if (result.message) {
+                setSuccess(result.message)
+            }
+
             userInfo.password = formData.newPass;
             if (userInfo) {
                 setFormData({
@@ -61,6 +79,7 @@ const CardProfile = ({ userInfo }) => {
                     newPass: '',
                     confPass: '',
                 })
+
             }
         }
     }
@@ -74,6 +93,7 @@ const CardProfile = ({ userInfo }) => {
                 <img src={imgProfile} alt="" className="w-40 rounded-full" />
                 <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
                     {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
+                    {success && <p className="text-green-500 text-sm mt-2">{success}</p>}
                     <div className="flex justify-between items-center gap-0">
                         <label htmlFor="inputName" className="text-[12px] font-medium">Nama Lengkap</label>
                         <input type="text" className="px-2 py-1 border border-amber-200 rounded-sm text-[12px]" id="inputName" value={formData.name} onChange={handleChange} name="name" />
@@ -95,7 +115,7 @@ const CardProfile = ({ userInfo }) => {
                         <input type="password" className="px-2 py-1 border border-amber-200 rounded-sm text-[12px]" id="inputConfPass" value={formData.confPass} onChange={handleChange} name="confPass" />
                     </div>
                     <div className="flex justify-end gap-2 py-2">
-                        <button className="btn bg-red-500" type="button">Delete</button>
+                        <button className="btn bg-red-500" type="button" onClick={() => { handleDelete(userInfo.id) }}>Delete</button>
                         <button className="btn bg-primary" type="submit">Save</button>
                     </div>
                 </form>
