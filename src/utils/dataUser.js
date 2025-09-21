@@ -6,8 +6,9 @@ const user = [
         name: "Allea Rakha",
         email: "emailpertama@gmail.com",
         password: "123",
-        img: iconProfile,
         phone: "081234567890",
+        img: iconProfile,
+        gender: "male",
     },
 ];
 

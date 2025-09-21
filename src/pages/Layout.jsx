@@ -1,10 +1,10 @@
 import { Outlet } from "react-router"
 import Header from "../components/sections/Navbar/Header"
 
-const Layout = ({ user, setUser, userData }) => {
+const Layout = () => {
     return (
         <>
-            <Header user={user} setUser={setUser} userData={userData} />
+            <Header />
             <Outlet />
         </>
     )
