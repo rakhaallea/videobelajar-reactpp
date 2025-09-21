@@ -20,7 +20,7 @@
     }
 
     .nav-items {
-        @apply flex items-center w-[480px]
+        @apply flex items-center w-[580px]
     }
 
     .profile {

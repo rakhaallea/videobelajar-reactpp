@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import useUsersStore from "../../../store/usersStore";
+import { useNavigate } from "react-router-dom";
 
 const CardProfile = () => {
     const { currentUser, editUser, deleteUser } = useUsersStore();
+    const navigate = useNavigate();
 
     const [formData, setFormData] = useState({
         name: "",
@@ -42,6 +44,7 @@ const CardProfile = () => {
         if (yakinHapus && currentUser) {
             const result = await deleteUser(currentUser.id);
             if (result.success) {
+                navigate('/login')
                 setSuccess(result.message);
             } else {
                 setError(result.message);

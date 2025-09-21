@@ -1,5 +1,4 @@
 import { create } from "zustand";
-import iconProfile from "../assets/icon/jess-icon.png";
 import { getUsers, createUser, updateUser, deleteUser } from "../services/api/userService";
 
 const useUsersStore = create((set, get) => ({
@@ -7,6 +6,7 @@ const useUsersStore = create((set, get) => ({
     currentUser: null,
     loading: false,
     error: null,
+    defaultProfile: '"https://i.pinimg.com/736x/3c/ae/07/3cae079ca0b9e55ec6bfc1b358c9b1e2.jpg"',
 
     // ambil semua user dari API
     fetchUsers: async () => {
@@ -43,7 +43,7 @@ const useUsersStore = create((set, get) => ({
     // register
     register: async (data) => {
         try {
-            const payload = { ...data, img: data.img || "https://i.pinimg.com/736x/3c/ae/07/3cae079ca0b9e55ec6bfc1b358c9b1e2.jpg" };
+            const payload = { ...data, img: data.img || defaultProfile };
             const res = await createUser(payload);
 
             set({ users: [...get().users, res] });
