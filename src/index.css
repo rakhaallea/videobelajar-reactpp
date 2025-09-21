@@ -57,7 +57,7 @@
 
 @layer utilities {
     nav .link-nav {
-        @apply text-[16px] font-medium leading-[1.4] tracking-[0.2] hover:bg-amber-300 hover:text-white text-dark-secondary border-b w-full border-other py-[16px] px-[12px] duration-100
+        @apply text-[16px] font-medium leading-[1.4] tracking-[0.2] hover:bg-amber-300 hover:text-white text-dark-secondary border-b w-full border-other py-[16px] px-[12px] duration-100 text-start md:text-center
     }
 
     nav button {

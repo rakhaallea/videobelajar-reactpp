@@ -2,7 +2,7 @@ import logoNavbar from '../../../assets/icon/logo_mobile.png';
 import { IoMdMenu } from "react-icons/io";
 import { IoExitOutline } from "react-icons/io5";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import useUsersStore from "../../../store/usersStore";
 
 const Header = () => {
@@ -12,6 +12,10 @@ const Header = () => {
 
     const currentUser = useUsersStore((state) => state.currentUser);
     const logout = useUsersStore((state) => state.logout);
+
+    useEffect(() => {
+        setIsOpen(false);
+    }, [location.pathname]);
 
     const logOut = () => {
         logout();
@@ -75,7 +79,7 @@ const Header = () => {
                 ) : (
                     <>
                         <a href="#" className="link-nav md:hidden">Kategori</a>
-                        <div className="flex gap-4 py-4 px-3">
+                        <div className="flex flex-col gap-4 py-4 px-3">
                             <Link to="/login"><button className="btn primary">Login</button></Link>
                             <Link to="/register"><button className="btn btn-register">Register</button></Link>
                         </div>
