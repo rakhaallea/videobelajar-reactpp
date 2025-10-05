@@ -71,7 +71,7 @@ const Header = () => {
                         <a href="/profile" className="link-nav" onClick={profile}>Profile Saya</a>
                         <a href="#" className="link-nav">Kelas Saya</a>
                         <a href="#" className="link-nav">Pesanan Saya</a>
-                        <button className="flex items-center gap-2 text-red-500" onClick={logOut}>
+                        <button className="flex items-center md:justify-center gap-2 text-red-500" onClick={logOut}>
                             <p>Keluar</p>
                             <IoExitOutline size={24} />
                         </button>

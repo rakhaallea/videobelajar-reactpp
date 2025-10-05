@@ -8,7 +8,16 @@ import Register from "../pages/registerForm";
 import Profile from "../pages/Profile";
 import NotFound from "../pages/NotFound";
 
+import useUsersStore from "../store/usersStore";
+import { useEffect } from "react";
+
 const App = () => {
+
+  const restoreUser = useUsersStore((state) => state.restoreUser);
+
+  useEffect(() => {
+    restoreUser(); // fetch ulang data user setelah refresh
+  }, []);
 
   return (
     <BrowserRouter>
@@ -18,7 +27,7 @@ const App = () => {
           {/* Child routes */}
           <Route path="login" element={<Login form="login" />} />
           <Route path="register" element={<Register form="register" />} />
-          <Route index path="/" element={<Homepage />} />
+          <Route index element={<Homepage />} />
           <Route path="profile" element={<Profile />} />
         </Route>
 
